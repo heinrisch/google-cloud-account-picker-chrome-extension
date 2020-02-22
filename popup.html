@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GCP Account Picker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+
+        body {
+            padding: 2rem;
+        }
+
+        #status {
+            margin-top: 1rem;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .line {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 1rem;
+        }
+
+        .filler {
+            flex-grow: 1;
+        }
+
+        .input-label {
+            margin-right: 1rem;
+            width: 15rem;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <h3 class="text-nowrap">Google Cloud Default Account Picker</h3></div>
+<div class="line">
+    <span class="input-label">Default account number: </span>
+    <input type="number" id="input-authuser" name="quantity" min="0" max="100">
+</div>
+<div class="line">
+    <span class="input-label">Force to account: </span>
+    <input type="checkbox" id="input-force">
+</div>
+
+<div class="line">
+    <button id="disable" class="btn btn-danger">Disable</button>
+    <div class="filler"></div>
+    <button id="save-and-enable" class="btn btn-success">Save & Enable</button>
+</div>
+
+<div id="status"></div>
+</div>
+
+<script src="lib/chroma.js"></script>
+<script src="options.js"></script>
+</body>
+</html>
